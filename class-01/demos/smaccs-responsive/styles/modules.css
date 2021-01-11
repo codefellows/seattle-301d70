@@ -1,0 +1,12 @@
+/* affecting specific changes to pieces of the page
+
+- the color of something
+- font size
+- border design
+
+*/
+
+section {
+  background-color: #301d7030;
+  border: 1px solid #301d70;
+}

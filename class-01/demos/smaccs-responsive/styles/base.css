@@ -1,0 +1,11 @@
+/* Anything that would be true across the entire domain */
+
+* {
+  box-sizing: border-box;
+  /* sets the border of a box to cut into the size of the box */
+  /* a 300px wide box with a 100px border and a 0px border will take up the same space on the screen */
+
+  
+}
+
+/*common properties to add to specific subsets of elements:: margin: 0, padding: 0, width: 100%, height: 100% */
