@@ -1,0 +1,10 @@
+img {
+  width: 200px
+}
+li {
+  float: left;
+}
+
+/* li:first-child {
+  display:none;
+} */
