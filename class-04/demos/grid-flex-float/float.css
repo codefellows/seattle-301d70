@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  height: 44px;
+  background-color: #111;
+}
+
+header li {
+  float: left;
+  color: #eee;
+  line-height: 44px;
+  width: 10%;
+  text-align: center;
+}
+
+ul {
+  overflow: hidden;
+}
+
+nav {
+  width: 90%;
+  margin: auto;
+}
+
+/* > means the direct child ` ` means anything within   */
+main > div:first-child { 
+  background-color: #eee;
+}
+
+main > div:first-child p {
+  height: 64px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 735px;
+  margin: auto;
+}
+
+main ul:first-of-type li > * {
+  margin: auto;
+  display: block;
+  text-align: center;;
+}
+
+main ul:first-of-type li  {
+  padding-top: 55px;
+}
+
+main ul:first-of-type li > h2 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+main ul:first-of-type li > h3 {
+  margin-top: 13px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+main ul:first-of-type li > p {
+  margin-top: 13px;
+}
+
+main ul:first-of-type li > div {
+  overflow: hidden;
+}
+
+main ul:first-of-type li div > a {
+  margin-top: 13px;
+  width: 50%;
+  float: left;
+}
+
+main ul:first-of-type li div > a:first-of-type {
+  text-align: right;
+  padding-right: 20px;
+}
+
+main ul:first-of-type li div > a:nth-of-type(2) {
+  text-align: left;
+  padding-left: 20px;
+}
+
+
+main ul:first-of-type li > img {
+  margin-top: 13px;
+}
+
+ main ul:nth-of-type(2) li {
+   width: 50%;
+   float: left;
+ }
