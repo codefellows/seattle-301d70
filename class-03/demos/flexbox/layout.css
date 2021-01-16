@@ -1,0 +1,21 @@
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 800px; */
+  justify-content: space-around;
+  align-items: flex;
+  flex-direction: row;
+  height: 800px;  
+  /* space evenly sets the in between and leftmost and rightmost edge to be equal */
+  /* space around sets an even margin on the left and right of EACH element left and right are one unit of space, the middle each get 2 units of space */
+}
+div {
+  height : 200px;
+  width :200px;
+  /* width: 100%; */
+}
+
+div:nth-child(4n){
+  height: 400px;
+}

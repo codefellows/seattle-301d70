@@ -1,0 +1,13 @@
+img {
+  width: 400px;
+}
+
+main > ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(auto-fill, 150px);
+  max-height: 300vh;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+}
