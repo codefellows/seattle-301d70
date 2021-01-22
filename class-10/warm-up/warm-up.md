@@ -3,7 +3,7 @@ Read through this code as if you are the interpreter. Find all of the mistakes i
 
 ## server.js
 
-```
+``` javascript
 'use strict';
 
 const express = require('express');
