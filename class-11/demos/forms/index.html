@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+</head>
+<body>
+  <h1>I live at localhost:8080 Forms</h1>
+<!-- http://127.0.0.1:8080/?name=stephen+king&flavor=yak+cheese&quantity=3 -->
+<!-- a Form's "action" is the url we want to visit -->
+<!-- a Form's inputs create the query string parameters ?key=value-->
+<!-- an input's name === key -->
+<!-- an input's value === value -->
+  <form action="http://localhost:3000/ice-cream">
+    <fieldset>
+      <legend> Ice Cream   </legend>
+
+        <label for="name">
+          Name
+          <input type="text" name="name">
+        </label>
+
+        <label for="flavor">
+          Flavor
+          <input type="text" name="flavor">
+        </label>
+
+        <label for="quantity">
+          Scoops
+          <input type="number" name="quantity">
+        </label>
+
+        <input type="submit">
+    </fieldset>
+  </form>
+</body>
+</html>

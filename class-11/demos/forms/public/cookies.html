@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+</head>
+
+<body>
+  <h1> I live at localhost:3000 Forms hosted by a Server</h1>
+<!-- http://localhost:3000/cookies -->
+  <!-- http://localhost:3000/cookies?name=stephen+king&flavor=yak+cheese&quantity=99 -->
+<!-- http://127.0.0.1:8080/?name=stephen+king&flavor=yak+cheese&quantity=3 -->
+
+
+<!-- Forms talk to their own url, we can change it with the "action" -->
+<!-- if talking to YOUR server, you don't need the full url -->
+<!-- only need the route "/order" -->
+  <form action="/order">
+    <fieldset>
+      <legend> Cookies </legend>
+
+      <label for="name">
+        Name
+        <input type="text" name="name">
+      </label>
+
+      <label for="flavor">
+        Flavor
+        <input type="text" name="flavor">
+      </label>
+
+      <label for="quantity">
+        Quantity
+        <input type="number" name="quantity">
+      </label>
+
+      <input type="submit">
+    </fieldset>
+  </form>
+
+  <!-- A POST method is a type of http that we can send with forms. this is sending info from within the envelope -->
+  <form method="POST">
+    <fieldset>
+      <legend> Cookies with POST</legend>
+  
+      <label for="name">
+        Name
+        <input type="text" name="name">
+      </label>
+  
+      <label for="flavor">
+        Flavor
+        <input type="text" name="flavor">
+      </label>
+  
+      <label for="quantity">
+        Quantity
+        <input type="number" name="quantity">
+      </label>
+  
+      <input type="submit">
+    </fieldset>
+  </form>
+</body>
+
+</html>
