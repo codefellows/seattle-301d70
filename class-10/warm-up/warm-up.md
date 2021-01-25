@@ -3,38 +3,50 @@ Read through this code as if you are the interpreter. Find all of the mistakes i
 
 ## server.js
 
-```
+``` javascript
 'use strict';
 
 const express = require('express');
+const pg = require('pg');
 
-const app = app();
+const app = express();
 
-app.post(('/') => (request, response) {
-  let SQL = 'Insert into users values $0, $1, $2';
+const DATABASE_URL=process.env.DATABASE_URL; //this could live in the file or in my terminal as an env variable
 
-  let values = {id, request.username, request.password};
+const client = new pg.Client(DATABASE_URL);
+
+const PORT = 3000;
+
+app.post('/' , (request, response) => {
+  const SQL = 'INSERT INTO users (username, password) VALUES ($1, $2)';
+
+  const values = [request.body.username, request.body.password];
   
-  client.query(SQL)
-    .then({
-      response.send(result.rowsCount);
+  client.query(SQL, values)
+    .then(result => {
+      response.send(result.rowCount);
     })
-})
+    .catch(err => console.error(err));
+});
 
-app.listen(PORT, () {
-  console.log('Listening on ${PORT}')}
-);
+client.connect()
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`Listening on ${PORT}`)
+      })
+      .catch(err => console.error(err));
+  });
 ```
 
 ## schema.sql
 
-```
-DROP TABLE IF NOT EXISTS users
+``` sql
+DROP TABLE IF EXISTS user;
 
-CREATE TABLE users() {
-  id SERIAL KEY;
-  username VARCHAR;
-  password VARCHAR;
-  age NUM;
-}
+CREATE TABLE user(
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(255),
+  password VARCHAR(255),
+  age INTEGER
+);
 ```
