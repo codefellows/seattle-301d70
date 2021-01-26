@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <h1>results</h1>
+
+  <ul>
+    <% for(let i = 0; i < titles.length; i++){ %>
+      <li>
+        <p><%= titles[i] %></p>
+        <!-- This is what you need for lab 12 -->
+        <form action="save-book" method="POST">
+          <input type="hidden" name="title" value="<%= titles[i] %>">
+          <input type="submit" value="save book">
+        </form>
+      </li>
+    <% } %>
+  </ul>
+</body>
+</html>

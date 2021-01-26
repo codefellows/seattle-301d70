@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todos</title>
+</head>
+<body>
+  <h1>Todos</h1>
+
+  <table>
+    <tr>
+      <th>Task</th>
+      <th>Due</th>
+      <th>Link</th>
+    </tr>
+    <% for(let i = 0; i < todos.length; i++){ %>
+      <tr>
+        <td><%= todos[i].task %></td>
+        <td><%= todos[i].dueDate %></td>
+        <td><a href="/todo/<%= i %>">Detail View</a>
+        </td><td><a href="/todo/<%= todos[i].id %>">Detail View</a></td>
+      </tr>
+    <% } %>
+  </table>
+
+
+  <form action="/todo" method="POST">
+    <fieldset>
+      <legend>Add Todo</legend>
+      <label for="task">
+        task
+        <input type="text" name="task">
+      </label>
+      <label for="dueDate">
+        due
+        <input type="date" name="dueDate">
+      </label>
+
+      <input type="submit" value="add task">
+    </fieldset>
+  </form>
+</body>
+</html>
