@@ -1,0 +1,36 @@
+<%- include('../partials/head.ejs') %>
+<body>
+  <%- include('../partials/header.ejs') %>
+
+  <h1>Todos</h1>
+
+  <table>
+    <tr>
+      <th>Task</th>
+      <th>Due</th>
+      <th>Link</th>
+    </tr>
+    <% for(let i = 0; i < todos.length; i++){ %>
+      <%- include('../partials/todo-row.ejs', {i: i, todos: todos}) %>
+      <!-- we can think of include as just res.render('path to ejs', {object with keys}) -->
+    <% } %>
+  </table>
+
+
+  <form action="/todo" method="POST">
+    <fieldset>
+      <legend>Add Todo</legend>
+      <label for="task">
+        task
+        <input type="text" name="task">
+      </label>
+      <label for="dueDate">
+        due
+        <input type="date" name="dueDate">
+      </label>
+
+      <input type="submit" value="add task">
+    </fieldset>
+  </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!-- pass keys of `todos` and `i` to make this partial work -->
+
+<tr>
+  <td><%= todos[i].task %></td>
+  <td><%= todos[i].dueDate %></td>
+  </td>
+  <td><a href="/todo/<%= todos[i].id %>">Detail View</a></td>
+  <td>
+    <!-- app.post('/todo/:index', deleteTodo); -->
+    <!-- action='/todo/1' will create req.params.index = 1-->
+    <form action="/todo/<%= todos[i].id %>?_method=delete" method="POST">
+      <input type="submit" value="delete me">
+    </form>
+  </td>
+
+    <td>
+      <form action="/todo/<%= todos[i].id %>?_method=put" method="POST">
+        <input type="submit" value="update me">
+      </form>
+    </td>
+</tr>
