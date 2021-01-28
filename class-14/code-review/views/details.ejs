@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books</title>
+</head>
+
+<body>
+  <h1>Book</h1>
+
+  <%- include('book-partial.ejs') %>
+
+  <form action="/book/<%= book.isbn %>?_method=PUT" method="POST">
+    <input type="text" value="<%= book.title%>" name="title">
+    <input type="text" value="<%= book.isbn%>" name="isbn">
+    <input type="text" value="<%= book.description%>" name="description">
+    <input type="submit">
+  </form>
+
+</body>
+
+</html>
