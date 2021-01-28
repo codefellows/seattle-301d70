@@ -1,7 +1,7 @@
 # Warm-Up Exercise
 This code sample is written in Java. Read through the code and determine the output for each function.
 
-```
+``` java
 public class Locate {
     public static void main(String[] args) {
         int x = 5;
